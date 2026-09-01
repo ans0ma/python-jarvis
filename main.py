@@ -4,6 +4,8 @@ import subprocess
 
 r = sr.Recognizer()
 
+TELEGRAM_PATH = r"D:\Users\Andrey\AppData\Roaming\Telegram Desktop\Telegram.exe"
+
 print("Джавис запущен...")
 
 try:
@@ -23,11 +25,15 @@ try:
                 if "браузер" in cmd:
                     webbrowser.open("https://www.google.com")
 
-                elif "начать" in cmd:
-                    webbrowser.open("https://rt.pornhub.com")
-
-                elif "калькулятор" in cmd:
-                    subprocess.Popen("calc.exe")
+                elif "telegram" in cmd or "телеграм" in cmd:
+                    
+                    subprocess.run([
+                        "cmd",
+                        "/c",
+                        "start",
+                        "",
+                        TELEGRAM_PATH
+                    ])
 
                 elif "стоп" in cmd:
                     break
