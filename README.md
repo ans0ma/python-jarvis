@@ -1,3 +1,3 @@
 # Jarvis
 
-Первая версия Python Jarvis
+Первая версия голосового ассистена - Python Jarvis
